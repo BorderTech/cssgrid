@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>idgray grid templates</title>
+		<link href="css/idgray-grid.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="demo.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div>
+
+
+			<h1>idgray grid examples</h1>
+			<p class="lead">Grid Layouts using the new CSS Grid Feature.</p>
+			<ul>
+				<li><a href="#12cols">Default 12 columns</a></li>
+				<li><a href="#preCol">Predefined Column Layouts</a></li>
+				<li><a href="#preAppl">Predefined Application Layouts</a></li>
+				<li><a href="#border">Border Layout</a></li>
+			</ul>
+
+			<h2 id = "12cols">Default 12 columns</h2>
+			<h3>Five break points</h3>
+			<p>Each break point (xs, sm, md, lg, xl) starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+			<div class="ig-grid">
+				<div class="ig-col-4">.ig-col-4</div>
+				<div class="ig-col-4">.ig-col-4</div>
+				<div class="ig-col-4">.ig-col-4</div>
+			</div>
+
+			<div class="ig-grid">
+				<div class="ig-col-sm-4">.ig-col-sm-4</div>
+				<div class="ig-col-sm-4">.ig-col-sm-4</div>
+				<div class="ig-col-sm-4">.ig-col-sm-4</div>
+			</div>
+
+			<div class="ig-grid">
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+			</div>
+
+			<div class="ig-grid">
+				<div class="ig-col-lg-4">.ig-col-lg-4</div>
+				<div class="ig-col-lg-4">.ig-col-lg-4</div>
+				<div class="ig-col-lg-4">.ig-col-lg-4</div>
+			</div>
+
+			<div class="ig-grid">
+				<div class="ig-col-xl-4">.ig-col-xl-4</div>
+				<div class="ig-col-xl-4">.ig-col-xl-4</div>
+				<div class="ig-col-xl-4">.ig-col-xl-4</div>
+			</div>
+
+			<h3>Three equal columns</h3>
+			<p>Get three equal-width columns on desktops and scaling to large desktops. On mobile devices, tablets and below, the columns will automatically stack.</p>
+			<div class="ig-grid">
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+			</div>
+
+			<h3>Three unequal columns</h3>
+			<p>Get three columns starting at desktops and scaling to large desktops of various widths.
+			</p>
+			<div class="ig-grid">
+				<div class="ig-col-md-3">.ig-col-md-3</div>
+				<div class="ig-col-md-6">.ig-col-md-6</div>
+				<div class="ig-col-md-3">.ig-col-md-3</div>
+			</div>
+
+			<h3>Two columns</h3>
+			<p>Get two columns starting at desktops and scaling to large desktops.</p>
+			<div class="ig-grid">
+				<div class="ig-col-md-8">.ig-col-md-8</div>
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+			</div>
+
+			<h3>Full width, single column</h3>
+			<p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+			<hr>
+
+			<h3>Two columns with two nested columns</h3>
+			<div class="ig-grid">
+				<div class="ig-col-md-8">
+					.ig-col-md-8
+					<div class="ig-grid">
+						<div class="ig-col-md-6">.ig-col-md-6</div>
+						<div class="ig-col-md-6">.ig-col-md-6</div>
+					</div>
+				</div>
+				<div class="ig-col-md-4">.ig-col-md-4</div>
+			</div>
+
+			<hr>
+
+			<h3>Mixed: mobile and desktop</h3>
+			<div class="ig-grid">
+				<div class="ig-col-12 ig-col-md-8">.ig-col-12 .ig-col-md-8</div>
+				<div class="ig-col-6 ig-col-md-4">.ig-col-6 .ig-col-md-4</div>
+			</div>
+			<div class="ig-grid">
+				<div class="ig-col-6 ig-col-md-4">.ig-col-6 .ig-col-md-4</div>
+				<div class="ig-col-6 ig-col-md-4">.ig-col-6 .ig-col-md-4</div>
+				<div class="ig-col-6 ig-col-md-4">.ig-col-6 .ig-col-md-4</div>
+			</div>
+			<div class="ig-grid">
+				<div class="ig-col-6">.ig-col-6</div>
+				<div class="ig-col-6">.ig-col-6</div>
+			</div>
+
+			<hr>
+
+			<h3>Mixed: mobile, tablet, and desktop</h3>
+			<p></p>
+			<div class="ig-grid">
+				<div class="ig-col-12 ig-col-sm-6 ig-col-lg-8">.ig-col-12 .ig-col-sm-6 .ig-col-lg-8</div>
+				<div class="ig-col-6 ig-col-lg-4">.ig-col-6 .ig-col-lg-4</div>
+			</div>
+			<div class="ig-grid">
+				<div class="ig-col-6 ig-col-sm-4">.ig-col-6 .ig-col-sm-4</div>
+				<div class="ig-col-6 ig-col-sm-4">.ig-col-6 .ig-col-sm-4</div>
+				<div class="ig-col-6 ig-col-sm-4">.ig-col-6 .ig-col-sm-4</div>
+			</div>
+
+			<hr>
+
+			<h2 id="preCol">Predefined Column Layouts</h2>
+
+			<h3>Two Columns .ig-cols-2</h3>
+			<h4>Default (50/50)</h4>
+			<div class="ig-grid ig-cols-2">
+				<div>50%</div>
+				<div>50%</div>
+			</div>
+
+			<h4>.ig-split-10-90</h4>
+			<div class="ig-grid ig-cols-2 ig-split-10-90">
+				<div>10%</div>
+				<div>90%</div>
+			</div>
+			<h4>.ig-split-20-80</h4>
+			<div class="ig-grid ig-cols-2 ig-split-20-80">
+				<div>20%</div>
+				<div>80%</div>
+			</div>
+			<h4>.ig-split-30-70</h4>
+			<div class="ig-grid ig-cols-2 ig-split-30-70">
+				<div>30%</div>
+				<div>70%</div>
+			</div>
+			<h4>.ig-split-40-60</h4>
+			<div class="ig-grid ig-cols-2 ig-split-40-60">
+				<div>40%</div>
+				<div>60%</div>
+			</div>
+			<h4>.ig-split-50-50</h4>
+			<div class="ig-grid ig-cols-2 ig-split-50-50">
+				<div>50%</div>
+				<div>50%</div>
+			</div>
+			<h4>.ig-split-60-40</h4>
+			<div class="ig-grid ig-cols-2 ig-split-60-40">
+				<div>60%</div>
+				<div>40%</div>
+			</div>
+			<h4>.ig-split-70-30</h4>
+			<div class="ig-grid ig-cols-2 ig-split-70-30">
+				<div>70%</div>
+				<div>30%</div>
+			</div>
+			<h4>.ig-split-80-20</h4>
+			<div class="ig-grid ig-cols-2 ig-split-80-20">
+				<div>80%</div>
+				<div>20%</div>
+			</div>
+			<h4>.ig-split-90-10</h4>
+			<div class="ig-grid ig-cols-2 ig-split-90-10">
+				<div>90%</div>
+				<div>10%</div>
+			</div>
+
+			<hr>
+
+			<h3>Responsive Two Columns .ig-cols-2</h3>
+			<p>The predefined layouts are Desktop First. So the breakpoints go from LG to XS (instead of mobile first).</p>
+			<h4>.ig-bk-lg</h4>
+			<div class="ig-grid ig-cols-2 ig-split-70-30 ig-bk-lg">
+				<div>70%</div>
+				<div>30%</div>
+			</div>
+			<h4>.ig-bk-md</h4>
+			<div class="ig-grid ig-cols-2 ig-split-70-30 ig-bk-md">
+				<div>70%</div>
+				<div>30%</div>
+			</div>
+			<h4>.ig-bk-sm</h4>
+			<div class="ig-grid ig-cols-2 ig-split-70-30 ig-bk-sm">
+				<div>70%</div>
+				<div>30%</div>
+			</div>
+			<h4>.ig-bk-xs</h4>
+			<div class="ig-grid ig-cols-2 ig-split-70-30 ig-bk-xs">
+				<div>70%</div>
+				<div>30%</div>
+			</div>
+
+			<hr>
+
+			<h3>Three Columns .ig-cols-3</h3>
+			<h4>Default (33/33/33)</h4>
+			<div class="ig-grid ig-cols-3">
+				<div>33%</div>
+				<div>33%</div>
+				<div>33%</div>
+			</div>
+
+			<h4>.ig-split-10-80-10</h4>
+			<div class="ig-grid ig-cols-3 ig-split-10-80-10">
+				<div>10%</div>
+				<div>80%</div>
+				<div>10%</div>
+			</div>
+			<h4>.ig-split-15-70-15</h4>
+			<div class="ig-grid ig-cols-3 ig-split-15-70-15">
+				<div>15%</div>
+				<div>70%</div>
+				<div>15%</div>
+			</div>
+			<h4>.ig-split-20-60-20</h4>
+			<div class="ig-grid ig-cols-3 ig-split-20-60-20">
+				<div>20%</div>
+				<div>60%</div>
+				<div>20%</div>
+			</div>
+			<h4>.ig-split-25-50-25</h4>
+			<div class="ig-grid ig-cols-3 ig-split-25-50-25">
+				<div>25%</div>
+				<div>50%</div>
+				<div>25%</div>
+			</div>
+			<h4>.ig-split-25-25-50</h4>
+			<div class="ig-grid ig-cols-3 ig-split-25-25-50">
+				<div>25%</div>
+				<div>25%</div>
+				<div>50%</div>
+			</div>
+			<h4>.ig-split-50-25-25</h4>
+			<div class="ig-grid ig-cols-3 ig-split-50-25-25">
+				<div>50%</div>
+				<div>25%</div>
+				<div>25%</div>
+			</div>
+
+			<hr>
+
+			<h3>Responsive Three Columns .ig-cols-3</h3>
+			<p>The predefined layouts are Desktop First. So the breakpoints go from LG to XS (instead of mobile first).</p>
+			<h4>.ig-bk-lg</h4>
+			<div class="ig-grid ig-cols-3 ig-split-25-50-25 ig-bk-lg">
+				<div>25%</div>
+				<div>50%</div>
+				<div>25%</div>
+			</div>
+			<h4>.ig-bk-md</h4>
+			<div class="ig-grid ig-cols-3 ig-split-25-50-25 ig-bk-md">
+				<div>25%</div>
+				<div>50%</div>
+				<div>25%</div>
+			</div>
+			<h4>.ig-bk-sm</h4>
+			<div class="ig-grid ig-cols-3 ig-split-25-50-25 ig-bk-sm">
+				<div>25%</div>
+				<div>50%</div>
+				<div>25%</div>
+			</div>
+			<h4>.ig-bk-xs</h4>
+			<div class="ig-grid ig-cols-3 ig-split-25-50-25 ig-bk-xs">
+				<div>25%</div>
+				<div>50%</div>
+				<div>25%</div>
+			</div>
+
+			<hr>
+
+			<h2 id="preAppl">Predefined Application Layouts - .ig-app</h2>
+
+			<p>Application Layouts consist of Header, Main Areas and Footer.</p>
+
+			<h3>One Column Application - .ig-cols-1 .ig-app</h3>
+			<div class="ig-grid ig-cols-1 ig-app">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main">.ig-main</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+
+			<hr>
+
+			<h3>Two Column Application - .ig-cols-2 .ig-app (Default 50/50)</h3>
+			<div class="ig-grid ig-cols-2 ig-app">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h3>Two Column Application- .ig-cols-2 .ig-app .ig-split-30-70</h3>
+			<p>Any predefined 2 column layout can be used.</p>
+			<div class="ig-grid ig-cols-2 ig-app ig-split-30-70">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+
+			<hr>
+
+			<h3>Responsive Two Column Application - .ig-cols-2 .ig-app</h3>
+			<h4>.ig-bk-lg</h4>
+			<div class="ig-grid ig-cols-2 ig-app ig-split-30-70 ig-bk-lg">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h4>.ig-bk-md</h4>
+			<div class="ig-grid ig-cols-2 ig-app ig-split-30-70 ig-bk-md">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h4>.ig-bk-sm</h4>
+			<div class="ig-grid ig-cols-2 ig-app ig-split-30-70 ig-bk-sm">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h4>.ig-bk-xs</h4>
+			<div class="ig-grid ig-cols-2 ig-app ig-split-30-70 ig-bk-xs">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+
+			<hr>
+
+			<h3>Three Column Application - .ig-cols-3 .ig-app (default 33/33/33)</h3>
+			<div class="ig-grid ig-cols-3 ig-app">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-main-3">.ig-main-3</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h3>Three Column Application - .ig-cols-3 .ig-app .ig-split-25-50-25</h3>
+			<p>Any predefined 3 column layout can be used.</p>
+			<div class="ig-grid ig-cols-3 ig-app ig-split-25-50-25">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-main-3">.ig-main-3</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+
+			<hr>
+
+			<h3>Responsive Three Column Application - .ig-cols-3 .ig-app</h3>
+			<h4>.ig-bk-lg</h4>
+			<div class="ig-grid ig-cols-3 ig-app ig-split-25-50-25 ig-bk-lg">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-main-3">.ig-main-3</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h4>.ig-bk-md</h4>
+			<div class="ig-grid ig-cols-3 ig-app ig-split-25-50-25 ig-bk-md">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-main-3">.ig-main-3</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h4>.ig-bk-sm</h4>
+			<div class="ig-grid ig-cols-3 ig-app ig-split-25-50-25 ig-bk-sm">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-main-3">.ig-main-3</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+			<h4>.ig-bk-xs</h4>
+			<div class="ig-grid ig-cols-3 ig-app ig-split-25-50-25 ig-bk-xs">
+				<div class="ig-header">.ig-header</div>
+				<div class="ig-main-1">.ig-main-1</div>
+				<div class="ig-main-2">.ig-main-2</div>
+				<div class="ig-main-3">.ig-main-3</div>
+				<div class="ig-footer">.ig-footer</div>
+			</div>
+
+			<hr>
+
+
+			<h2 id="border" >Border Layout</h2>
+			<h3>Border - .ig-cols-3 .ig-border (default 33/33/33)</h3>
+			<div class="ig-grid ig-cols-3 ig-border">
+				<div class="ig-north">.ig-north</div>
+				<div class="ig-west">.ig-west</div>
+				<div class="ig-center">.ig-center</div>
+				<div class="ig-east">.ig-east</div>
+				<div class="ig-south">.ig-south</div>
+			</div>
+			<h3>Border - .ig-cols-3 .ig-border .ig-split-25-50-25</h3>
+			<p>Any predefined 3 column layout can be used.</p>
+			<div class="ig-grid ig-cols-3 ig-border ig-split-25-50-25">
+				<div class="ig-north">.ig-north</div>
+				<div class="ig-west">.ig-west</div>
+				<div class="ig-center">.ig-center</div>
+				<div class="ig-east">.ig-east</div>
+				<div class="ig-south">.ig-south</div>
+			</div>
+
+			<hr>
+
+			<h3>Responsive Border - .ig-cols-3 .ig-border</h3>
+			<h4>.ig-bk-lg</h4>
+			<div class="ig-grid ig-cols-3 ig-border ig-split-25-50-25 ig-bk-lg">
+				<div class="ig-north">.ig-north</div>
+				<div class="ig-west">.ig-west</div>
+				<div class="ig-center">.ig-center</div>
+				<div class="ig-east">.ig-east</div>
+				<div class="ig-south">.ig-south</div>
+			</div>
+			<h4>.ig-bk-md</h4>
+			<div class="ig-grid ig-cols-3 ig-border ig-split-25-50-25 ig-bk-md">
+				<div class="ig-north">.ig-north</div>
+				<div class="ig-west">.ig-west</div>
+				<div class="ig-center">.ig-center</div>
+				<div class="ig-east">.ig-east</div>
+				<div class="ig-south">.ig-south</div>
+			</div>
+			<h4>.ig-bk-sm</h4>
+			<div class="ig-grid ig-cols-3 ig-border ig-split-25-50-25 ig-bk-sm">
+				<div class="ig-north">.ig-north</div>
+				<div class="ig-west">.ig-west</div>
+				<div class="ig-center">.ig-center</div>
+				<div class="ig-east">.ig-east</div>
+				<div class="ig-south">.ig-south</div>
+			</div>
+			<h4>.ig-bk-xs</h4>
+			<div class="ig-grid ig-cols-3 ig-border ig-split-25-50-25 ig-bk-xs">
+				<div class="ig-north">.ig-north</div>
+				<div class="ig-west">.ig-west</div>
+				<div class="ig-center">.ig-center</div>
+				<div class="ig-east">.ig-east</div>
+				<div class="ig-south">.ig-south</div>
+			</div>
+
+		</div>
+	</body>
+</html>
