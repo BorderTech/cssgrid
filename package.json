@@ -1,0 +1,31 @@
+{
+  "name": "idgray",
+  "version": "0.0.1-beta",
+  "homepage": "https://bordertech.github.io/idgray/",
+  "author": "bordertech<bordertech@border.gov.au>",
+  "description": "Responsive CSS framework based on Grid",
+  "main": "docs/css/idgray.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BorderTech/idgray.git"
+  },
+  "license": "GNU",
+  "keywords": [
+    "css",
+    "grid",
+    "masonry",
+    "flexbox",
+    "responsive",
+    "framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/BorderTech/issues"
+  },
+  "scripts": {
+  },
+  "files": [
+    "docs",
+    "LICENSE",
+    "README.md"
+  ]
+}
