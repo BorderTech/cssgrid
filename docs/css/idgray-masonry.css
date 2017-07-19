@@ -5,6 +5,13 @@
 
 .ig-msry.ig-cols-12 > .ig-msry-sizer { width: 8.333%; }
 .ig-msry.ig-cols-12 > .ig-item { width: 8.333%; }
+/**
+* xs: up to 575px
+* sm: 576px to 767px
+* md: 768px to 991px
+* lg: 992px to 1199px
+* xl: 1200px and over
+*/
 
 /** Extra small devices (portrait phones, less than 576px) */
 /** No media query since this is the default */

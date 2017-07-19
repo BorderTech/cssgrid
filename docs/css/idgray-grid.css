@@ -1,3 +1,4 @@
+
 .ig-grid {
 	width: 100%;
 	display: grid;
@@ -47,6 +48,15 @@
 /** These styles invoke from XS down to XL (Mobile First) */
 
 /** No media query since this is the default */
+
+/**
+* xs: up to 575px
+* sm: 576px to 767px
+* md: 768px to 991px
+* lg: 992px to 1199px
+* xl: 1200px and over
+*/
+
 /** Extra small devices (portrait phones, less than 576px) */
 
 /** Gaps. */
@@ -66,6 +76,7 @@
 .ig-grid > .ig-col-10 { grid-column: span 10; }
 .ig-grid > .ig-col-11 { grid-column: span 11; }
 .ig-grid > .ig-col-12 { grid-column: span 12; }
+
 
 /** Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -194,6 +205,13 @@
 .ig-grid > .ig-main-2 { grid-area: main-2; }
 .ig-grid > .ig-main-3 { grid-area: main-3; }
 
+/**
+* xl: 1200px and over
+* lg: 992px to 1199px
+* md: 768px to 991px
+* sm: 576px to 767px
+* xs: up to 575px
+*/
 
 /** Large devices (desktops, 992px and up) */
 @media (max-width: 1200px) {

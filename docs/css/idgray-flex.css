@@ -19,6 +19,14 @@
 .ig-flex.ig-nowrap { flex-wrap: nowrap; }
 
 /** Media queries. */
+/**
+* xs: up to 575px
+* sm: 576px to 767px
+* md: 768px to 991px
+* lg: 992px to 1199px
+* xl: 1200px and over
+*/
+
 /** These styles invoke from XS down to XL (Mobile First) */
 
 /** No media query since this is the default */
