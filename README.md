@@ -1,2 +1,2 @@
 # idgray
-Responsive CSS framework based on Grid (also Flexbox if you want).
+Responsive CSS helper classes based on Grid (also Flexbox if you want).
