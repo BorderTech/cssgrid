@@ -15,7 +15,7 @@
     "responsive",
     "framework"
   ],
-  "license": "GNU",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
