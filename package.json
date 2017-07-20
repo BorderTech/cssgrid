@@ -4,7 +4,7 @@
   "homepage": "https://bordertech.github.io/idgray/",
   "author": "bordertech<bordertech@border.gov.au>",
   "description": "Responsive CSS helper classes based on Grid",
-  "main": "docs/css/idgray.css",
+  "main": "dist/idgray.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BorderTech/idgray.git"
@@ -20,21 +20,21 @@
     "framework"
   ],
   "bugs": {
-    "url": "https://github.com/BorderTech/issues"
-   },
+    "url": "https://github.com/BorderTech/idgray/issues"
+  },
   "devDependencies": {
     "node-sass": "4.5.3",
     "rimraf": "2.6.1"
   },
   "scripts": {
-    "build": "npm run build-clean && npm run build-sass && npm run build-sass-min",
-    "build-clean": "rimraf docs/css",
-    "build-sass": "node-sass --output-style expanded sass/base.scss docs/css/idgray.css",
-    "build-sass-min": "node-sass --output-style compressed sass/base.scss docs/css/idgray-min.css"
+    "build": "yarn run build-clean && yarn run build-sass && yarn run build-sass-min",
+    "build-clean": "rimraf dist",
+    "build-sass": "node-sass --output-style expanded sass/base.scss dist/idgray.css",
+    "build-sass-min": "node-sass --output-style compressed sass/base.scss dist/idgray-min.css",
+    "release": "yarn run build && yarn publish --access public"
   },
   "files": [
-    "docs",
-    "sass",
+    "dist",
     "LICENSE",
     "README.md"
   ]
