@@ -13,6 +13,7 @@
   "keywords": [
     "css",
     "grid",
+    "sass",
     "masonry",
     "flexbox",
     "responsive",
@@ -20,11 +21,20 @@
   ],
   "bugs": {
     "url": "https://github.com/BorderTech/issues"
+   },
+  "devDependencies": {
+    "node-sass": "4.5.3",
+    "rimraf": "2.6.1"
   },
   "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-sass-min",
+    "build-clean": "rimraf docs/css",
+    "build-sass": "node-sass --output-style expanded sass/base.scss docs/css/idgray.css",
+    "build-sass-min": "node-sass --output-style compressed sass/base.scss docs/css/idgray-min.css"
   },
   "files": [
     "docs",
+    "sass",
     "LICENSE",
     "README.md"
   ]
