@@ -1,0 +1,21 @@
+
+.ig-grid {
+	margin-bottom: 1rem;
+	grid-gap: 6px;
+}
+.ig-grid .ig-grid {
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+
+.ig-grid > * {
+	background-color: #444;
+	color: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+}
+.ig-grid .ig-grid > * {
+	background-color: #333;
+}
+
