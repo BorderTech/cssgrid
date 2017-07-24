@@ -13,10 +13,10 @@
     </section>
     {% endif %}
 
-  <a class="nav-item nav-link {% if page.route == 'index' %}nav-active{% endif %}" href="index">
+  <a class="nav-item {% if page.route == 'index' %}nav-active{% endif %}" href="index">
     Home
   </a>
-  <a class="nav-item nav-link nav-ml {% if page.route == 'demo' %}nav-active{% endif %}" href="demo">
+  <a class="nav-item nav-ml {% if page.route == 'demo' %}nav-active{% endif %}" href="demo">
     Demonstration
   </a>
 
