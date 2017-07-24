@@ -31,10 +31,7 @@
 	margin-left: 8px;
 }
 
-.nav-link {
-	background-color: #0090ff;
+.nav-active {
+
 }
 
-.nav-active {
-	background-color: #0000ff;
-}
