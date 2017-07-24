@@ -1,1 +1,4 @@
 theme: jekyll-theme-slate
+exclude:
+ - Gemfile
+ - Gemfile.lock 

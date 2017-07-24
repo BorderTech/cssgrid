@@ -19,3 +19,22 @@
 	background-color: #333;
 }
 
+.no-underline {
+    text-decoration: none !important;
+}
+
+.nav-item  {
+    color: #fff;
+}
+
+.nav-ml {
+	margin-left: 8px;
+}
+
+.nav-link {
+	background-color: #0090ff;
+}
+
+.nav-active {
+	background-color: #0000ff;
+}
