@@ -7,12 +7,11 @@
 // This is very much a rough draft.
 
 @mixin ms-2col-preset($l) {
-  $r: 100 - $l;
-  -ms-grid-columns: percentage($l / 100) percentage($r / 100);
+  -ms-grid-columns: percentage($l / 100) 1fr;
 }
 
-@mixin ms-3col-preset($first, $second, $third) {
-  -ms-grid-columns: percentage($first / 100) percentage($second / 100) percentage($third / 100);
+@mixin ms-3col-preset($first, $second) {
+  -ms-grid-columns: percentage($first / 100) percentage($second / 100) 1fr;
 }
 
 .ig-grid {
@@ -55,27 +54,27 @@
     }
 
     .ig-split-10-80-10 {
-      @include ms-3col-preset(10, 80, 10);
+      @include ms-3col-preset(10, 80);
     }
 
     .ig-split-15-70-15 {
-      @include ms-3col-preset(15, 70, 15);
+      @include ms-3col-preset(15, 70);
     }
 
     .ig-split-20-60-20 {
-      @include ms-3col-preset(20, 60, 20);
+      @include ms-3col-preset(20, 60);
     }
 
     .ig-split-25-50-25 {
-      @include ms-3col-preset(25, 50, 25);
+      @include ms-3col-preset(25, 50);
     }
 
     .ig-split-25-25-50 {
-      @include ms-3col-preset(25, 25, 50);
+      @include ms-3col-preset(25, 25);
     }
 
     .ig-split-50-25-25 {
-      @include ms-3col-preset(50, 25, 25);
+      @include ms-3col-preset(50, 25);
     }
   }
 

@@ -1,0 +1,216 @@
+// Application templates.
+// These styles invoke from XL down to XS (Not Mobile First - Desktop First))
+// DEFAULT - Extra large devices and up.
+@if ($ig-include-apps = 1) {
+  .ig-grid {
+    //  Standard Grid areas
+    > .ig-north { grid-area: north; }
+    > .ig-south { grid-area: south; }
+    > .ig-east { grid-area: east; }
+    > .ig-west { grid-area: west; }
+    > .ig-center { grid-area: center; }
+    > .ig-header { grid-area: header; }
+    > .ig-footer { grid-area: footer; }
+    > .ig-main { grid-area: main; }
+    > .ig-main-1 { grid-area: main-1; }
+    > .ig-main-2 { grid-area: main-2; }
+    > .ig-main-3 { grid-area: main-3; }
+
+    &.ig-cols-1.ig-app {
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+
+    &.ig-cols-2.ig-app {
+      grid-template-areas:
+        "header header"
+        "main-1 main-2"
+        "footer footer";
+    }
+
+    &.ig-cols-3 {
+      &.ig-app {
+        grid-template-areas:
+          "header header header"
+          "main-1 main-2 main-3"
+          "footer footer footer";
+      }
+
+      &.ig-border {
+        grid-template-areas:
+          "north north north"
+          "west center east"
+          "south south south";
+      }
+    }
+
+    //  Large devices and down.
+    @include mq-lg-max {
+      &.ig-cols-2 {
+        &.ig-bk-lg {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "footer";
+          }
+        }
+      }
+
+      &.ig-cols-3 {
+        &.ig-bk-lg {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "main-3"
+              "footer";
+          }
+
+          &.ig-border {
+            grid-template-areas:
+              "north"
+              "west"
+              "center"
+              "east"
+              "south";
+          }
+        }
+      }
+
+
+    }
+
+    //  Medium devices and down.
+    @include mq-md-max {
+      &.ig-cols-2 {
+        &.ig-bk-md {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "footer";
+          }
+        }
+      }
+
+
+      &.ig-cols-3 {
+        &.ig-bk-md {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "main-3"
+              "footer";
+          }
+
+          &.ig-border {
+            grid-template-areas:
+              "north"
+              "west"
+              "center"
+              "east"
+              "south";
+          }
+        }
+      }
+    }
+
+    //  Small devices and down.
+    @include mq-sm-max {
+      &.ig-cols-2 {
+        &.ig-bk-sm {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "footer";
+          }
+        }
+      }
+
+      &.ig-cols-3 {
+        &.ig-bk-sm {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "main-3"
+              "footer";
+          }
+
+          &.ig-border {
+            grid-template-areas:
+              "north"
+              "west"
+              "center"
+              "east"
+              "south";
+          }
+        }
+      }
+    }
+
+    //  Extra small devices and down.
+    @include mq-xs-max {
+      &.ig-cols-2 {
+        &.ig-bk-xs {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "footer";
+          }
+        }
+      }
+
+      &.ig-cols-3 {
+        &.ig-bk-xs {
+          grid-template-columns: 1fr;
+
+          &.ig-app {
+            grid-template-areas:
+              "header"
+              "main-1"
+              "main-2"
+              "main-3"
+              "footer";
+          }
+
+          &.ig-border {
+            grid-template-areas:
+              "north"
+              "west"
+              "center"
+              "east"
+              "south";
+          }
+        }
+      }
+    }
+  }
+}

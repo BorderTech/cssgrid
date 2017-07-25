@@ -27,10 +27,12 @@
     "rimraf": "2.6.1"
   },
   "scripts": {
-    "build": "yarn run build-clean && yarn run build-sass && yarn run build-sass-min",
+    "build": "yarn run build-clean && yarn run build-sass && yarn run build-sass-min && yarn run build-ie-sass && yarn run build-ie-sass-min",
     "build-clean": "rimraf dist",
     "build-sass": "node-sass --output-style expanded sass/base.scss dist/idgray.css",
     "build-sass-min": "node-sass --output-style compressed sass/base.scss dist/idgray-min.css",
+    "build-ie-sass": "node-sass --output-style expanded sass/ie-idgray.scss dist/ie-idgray.css",
+    "build-ie-sass-min": "node-sass --output-style compressed sass/ie-idgray.scss dist/ie-idgray-min.css",
     "release": "yarn run build && yarn publish --access public"
   },
   "files": [

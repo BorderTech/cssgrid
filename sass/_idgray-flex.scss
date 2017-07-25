@@ -1,8 +1,6 @@
-/**
-* --------------------------------------------------
-* SECTION - Flexbox
-* --------------------------------------------------
-*/
+// --------------------------------------------------
+// SECTION - Flexbox
+// --------------------------------------------------
 
 .ig-flex {
 	width: 100%;
@@ -25,10 +23,10 @@
 .ig-flex.ig-nowrap { flex-wrap: nowrap; }
 
 
-/** These styles invoke from XS down to XL (Mobile First) */
+//  These styles invoke from XS down to XL (Mobile First)
 
-/** No media query since this is the default */
-/** Extra small devices and up. */
+//  No media query since this is the default
+//  Extra small devices and up.
 .ig-flex.ig-cols-1 > .ig-item { flex-basis: 100%; }
 .ig-flex.ig-cols-1 > .ig-col-1 { flex-basis: 100%; }
 
@@ -56,7 +54,7 @@
 .ig-flex.ig-cols-12 > .ig-col-12 { flex-basis: 100%; }
 
 
-/** Small devices and up. */
+//  Small devices and up.
 @include mq-sm-min {
 	.ig-flex.ig-cols-2 > .ig-col-sm-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-sm-2 { flex-basis: 100%; }
@@ -79,7 +77,7 @@
 	.ig-flex.ig-cols-12 > .ig-col-sm-12 { flex-basis: 100%; }
 }
 
-/** Medium devices and up. */
+//  Medium devices and up.
 @include mq-md-min {
 	.ig-flex.ig-cols-2 > .ig-col-md-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-md-2 { flex-basis: 100%; }
@@ -102,7 +100,7 @@
 	.ig-flex.ig-cols-12 > .ig-col-md-12 { flex-basis: 100%; }
 }
 
-/** Large devices and up. */
+//  Large devices and up.
 @include mq-lg-min {
 	.ig-flex.ig-cols-2 > .ig-col-lg-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-lg-2 { flex-basis: 100%; }
@@ -125,7 +123,7 @@
 	.ig-flex.ig-cols-12 > .ig-col-lg-12 { flex-basis: 100%; }
 }
 
-/** Extra large devices and up. */
+//  Extra large devices and up.
 @include mq-xl-min {
 	.ig-flex.ig-cols-2 > .ig-col-xl-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-xl-2 { flex-basis: 100%; }
