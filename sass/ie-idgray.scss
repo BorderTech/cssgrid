@@ -1,0 +1,111 @@
+/**
+ * Partial implementation of idgray for IE 11.
+ */
+@import "vars/idgray";
+
+// NOTE
+// This is very much a rough draft.
+
+@mixin ms-2col-preset($l) {
+  $r: 100 - $l;
+  -ms-grid-columns: percentage($l/100) percentage($r/100);
+}
+
+@mixin ms-3col-preset($1, $2, $3) {
+  -ms-grid-columns: percentage($1/100) percentage($2/100) percentage($3/100);
+}
+/**
+* --------------------------------------------------
+* SECTION - Grid
+* --------------------------------------------------
+*/
+
+.ig-grid {
+  display: -ms-grid;
+  -ms-grid-columns: (1fr)[12];
+
+  > * {
+    -ms-grid-column-span: 12;
+  }
+
+  &.ig-cols-1 {
+    -ms-grid-columns: 1fr;
+
+    > * {
+      -ms-grid-column-span: 1;
+    }
+  }
+
+  &.ig-cols-2 {
+    -ms-grid-columns: 1fr 1fr;
+
+    > * {
+      -ms-grid-column-span: 1;
+    }
+
+    // predefined layouts
+    @each $lcol in 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90 {
+      $rcol: 100 - $lcol;
+      &.ig-split-#{$lcol}-#{$rcol} {
+        @include ms-2col-preset($lcol);
+      }
+    }
+  }
+
+  &.ig-cols-3 {
+    -ms-grid-columns: 1fr 1fr 1fr;
+
+    > * {
+      -ms-grid-column-span: 1;
+    }
+
+    .ig-split-10-80-10 {
+      @include ms-3col-preset(10, 80, 10);
+    }
+
+    .ig-split-15-70-15 {
+      @include ms-3col-preset(15, 70, 15);
+    }
+
+    .ig-split-20-60-20 {
+      @include ms-3col-preset(20, 60, 20);
+    }
+
+    .ig-split-25-50-25 {
+      @include ms-3col-preset(25, 50, 25);
+    }
+
+    .ig-split-25-25-50 {
+      @include ms-3col-preset(25, 25, 50);
+    }
+
+    .ig-split-50-25-25 {
+      @include ms-3col-preset(50, 25, 25);
+    }
+  }
+
+  &.ig-cols-12 {
+    > * {
+      -ms-grid-column-span: 1;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    > .ig-col-#{$i} {
+      -ms-grid-column-span: #{$i};
+    }
+  }
+
+  &.ig-gap-s {
+    -ms-grid-gap: $ig-gap-s;
+  }
+
+  &.ig-gap-m {
+    -ms-grid-gap: $ig-gap-m;
+  }
+
+  &.ig-gap-l {
+    -ms-grid-gap: $ig-gap-l;
+  }
+}
+
