@@ -1,6 +1,6 @@
 {
   "name": "@bordertech/idgray",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://bordertech.github.io/idgray/",
   "author": "bordertech<bordertech@border.gov.au>",
   "description": "Responsive CSS helper classes based on Grid",
