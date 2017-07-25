@@ -8,21 +8,16 @@
 
 @mixin ms-2col-preset($l) {
   $r: 100 - $l;
-  -ms-grid-columns: percentage($l/100) percentage($r/100);
+  -ms-grid-columns: percentage($l / 100) percentage($r / 100);
 }
 
-@mixin ms-3col-preset($1, $2, $3) {
-  -ms-grid-columns: percentage($1/100) percentage($2/100) percentage($3/100);
+@mixin ms-3col-preset($first, $second, $third) {
+  -ms-grid-columns: percentage($first / 100) percentage($second / 100) percentage($third / 100);
 }
-/**
-* --------------------------------------------------
-* SECTION - Grid
-* --------------------------------------------------
-*/
 
 .ig-grid {
   display: -ms-grid;
-  -ms-grid-columns: (1fr)[12];
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
   > * {
     -ms-grid-column-span: 12;
@@ -108,4 +103,3 @@
     -ms-grid-gap: $ig-gap-l;
   }
 }
-
