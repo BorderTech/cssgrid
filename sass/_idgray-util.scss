@@ -6,31 +6,32 @@
 
 .ig-hidden { display: none; }
 
-@media (min-width: 576px) {
+@include mq-sm-min {
 	.ig-hidden-sm { display: none; }
 }
-@media (min-width: 768px) {
+@include mq-md-min {
 	.ig-hidden-md { display: none; }
 }
-@media (min-width: 992px) {
+@include mq-lg-min {
 	.ig-hidden-lg { display: none; }
 }
-@media (min-width: 1200px) {
+@include mq-xl-min {
 	.ig-hidden-xl { display: none; }
 }
 
-@media (max-width: 575px) {
+
+@include mq-xs-only {
 	.ig-hidden-xs-only { display: none; }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@include mq-sm-only {
 	.ig-hidden-sm-only { display: none; }
 }
-@media (min-width: 768px) and (max-width: 991px){
+@include mq-md-only {
 	.ig-hidden-md-only { display: none; }
 }
-@media (min-width: 992px) and (max-width: 1199px){
+@include mq-lg-only {
 	.ig-hidden-lg-only { display: none; }
 }
-@media (min-width: 1200px) {
+@include mq-xl-only {
 	.ig-hidden-xl-only { display: none; }
 }

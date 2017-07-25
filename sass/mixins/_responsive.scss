@@ -1,0 +1,106 @@
+// Responsiveness
+
+/**
+* The following media queries are supported:-
+*   xs: up to 576px
+*   sm: 577px to 768px
+*   md: 769px to 992px
+*   lg: 993px to 1200px
+*   xl: 1201px and over
+*/
+
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+$xs-min: 0px;
+$sm-min: $xs + 1px;
+$md-min: $sm + 1px;
+$lg-min: $md + 1px;
+$xl-min: $lg + 1px;
+
+/**
+* Minimimum screen size queries. Break from XS up to XL.
+*/
+
+// With minumum - xs is the default (no media query)
+@mixin mq-sm-min {
+	@media (min-width: $sm-min) {
+		@content;
+	}
+}
+@mixin mq-md-min {
+	@media (min-width: $md-min) {
+		@content;
+	}
+}
+@mixin mq-lg-min {
+	@media (min-width: $lg-min) {
+		@content;
+	}
+}
+@mixin mq-xl-min {
+	@media  (min-width: $xl-min) {
+		@content;
+	}
+}
+
+/**
+* Maxmimum screen size queries. Break from XL down to XS.
+*/
+// With maximum - xl is the default (no media query)
+@mixin mq-xl-max {
+	@media  (max-width: $xl) {
+		@content;
+	}
+}
+@mixin mq-lg-max {
+	@media (max-width: $lg) {
+		@content;
+	}
+}
+@mixin mq-md-max {
+	@media (max-width: $md) {
+		@content;
+	}
+}
+@mixin mq-sm-max {
+	@media (max-width: $sm) {
+		@content;
+	}
+}
+@mixin mq-xs-max {
+	@media (max-width: $xs) {
+		@content;
+	}
+}
+
+/**
+* Only screen size queries.
+*/
+@mixin mq-xs-only {
+	@media (max-width: $xs) {
+		@content;
+	}
+}
+@mixin mq-sm-only {
+	@media (min-width: $sm-min) and (max-width: $sm) {
+		@content;
+	}
+}
+@mixin mq-md-only {
+	@media (min-width: $md-min) and (max-width: $md) {
+		@content;
+	}
+}
+@mixin mq-lg-only {
+	@media (min-width: $lg-min) and (max-width: $lg) {
+		@content;
+	}
+}
+@mixin mq-xl-only {
+	@media (min-width: $xl-min) {
+		@content;
+	}
+}

@@ -28,8 +28,7 @@
 /** These styles invoke from XS down to XL (Mobile First) */
 
 /** No media query since this is the default */
-/** Extra small devices (portrait phones, less than 576px) */
-
+/** Extra small devices and up. */
 .ig-flex.ig-cols-1 > .ig-item { flex-basis: 100%; }
 .ig-flex.ig-cols-1 > .ig-col-1 { flex-basis: 100%; }
 
@@ -57,8 +56,8 @@
 .ig-flex.ig-cols-12 > .ig-col-12 { flex-basis: 100%; }
 
 
-/** Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/** Small devices and up. */
+@include mq-sm-min {
 	.ig-flex.ig-cols-2 > .ig-col-sm-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-sm-2 { flex-basis: 100%; }
 
@@ -80,8 +79,8 @@
 	.ig-flex.ig-cols-12 > .ig-col-sm-12 { flex-basis: 100%; }
 }
 
-/** Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/** Medium devices and up. */
+@include mq-md-min {
 	.ig-flex.ig-cols-2 > .ig-col-md-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-md-2 { flex-basis: 100%; }
 
@@ -103,8 +102,8 @@
 	.ig-flex.ig-cols-12 > .ig-col-md-12 { flex-basis: 100%; }
 }
 
-/** Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/** Large devices and up. */
+@include mq-lg-min {
 	.ig-flex.ig-cols-2 > .ig-col-lg-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-lg-2 { flex-basis: 100%; }
 
@@ -126,8 +125,8 @@
 	.ig-flex.ig-cols-12 > .ig-col-lg-12 { flex-basis: 100%; }
 }
 
-/** Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/** Extra large devices and up. */
+@include mq-xl-min {
 	.ig-flex.ig-cols-2 > .ig-col-xl-1 { flex-basis: 50%; }
 	.ig-flex.ig-cols-2 > .ig-col-xl-2 { flex-basis: 100%; }
 

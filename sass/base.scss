@@ -1,21 +1,9 @@
 /**
 *
 * Idgray provides responsive CSS classes for Grid, Flexbox and Masonry.
-*
-* This CSS file has 4 sections:-
-* - Utils
-* - Grid
-* - Flexbox
-* - Masonry (can be used with the masonry.js)
-*
-* The following media queries are supported:-
-*   xs: up to 575px
-*   sm: 576px to 767px
-*   md: 768px to 991px
-*   lg: 992px to 1199px
-*   xl: 1200px and over
 */
 
+@import 'mixins/responsive';
 @import 'idgray-util';
 @import 'idgray-grid';
 @import 'idgray-flex';
