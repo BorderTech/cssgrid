@@ -53,7 +53,7 @@
 /** These styles invoke from XS down to XL (Mobile First) */
 
 /** No media query since this is the default */
-/** Extra small devices (portrait phones, less than 576px) */
+/** Extra small devices and up.*/
 
 /** Gaps. */
 .ig-grid.ig-gap-s { grid-gap: 6px; }
@@ -74,9 +74,8 @@
 .ig-grid > .ig-col-12 { grid-column: span 12; }
 
 
-/** Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
+/** Small devices and up. */
+@include mq-sm-min {
 	.ig-grid.ig-gap-sm-s { grid-gap: 6px; }
 	.ig-grid.ig-gap-sm-m { grid-gap: 12px; }
 	.ig-grid.ig-gap-sm-l { grid-gap: 18px; }
@@ -95,8 +94,8 @@
 	.ig-grid > .ig-col-sm-12 { grid-column: span 12; }
 }
 
-/** Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/** Medium devices and up. */
+@include mq-md-min {
 	.ig-grid.ig-gap-md-s { grid-gap: 6px; }
 	.ig-grid.ig-gap-md-m { grid-gap: 12px; }
 	.ig-grid.ig-gap-md-l { grid-gap: 18px; }
@@ -115,8 +114,8 @@
 	.ig-grid > .ig-col-md-12 { grid-column: span 12; }
 }
 
-/** Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/** Large devices and up. */
+@include mq-lg-min {
 	.ig-grid.ig-gap-lg-s { grid-gap: 6px; }
 	.ig-grid.ig-gap-lg-m { grid-gap: 12px; }
 	.ig-grid.ig-gap-lg-l { grid-gap: 18px; }
@@ -135,8 +134,8 @@
 	.ig-grid > .ig-col-lg-12 { grid-column: span 12; }
 }
 
-/** Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/** Extra large devices and up. */
+@include mq-xl-min {
 	.ig-grid.ig-gap-xl-s { grid-gap: 6px; }
 	.ig-grid.ig-gap-xl-m { grid-gap: 12px; }
 	.ig-grid.ig-gap-xl-l { grid-gap: 18px; }
@@ -160,7 +159,7 @@
 /** These styles invoke from XL down to XS (Not Mobile First - Desktop First))
 */
 
-/** DEFAULT - Extra large devices (large desktops, 1200px and up) */
+/** DEFAULT - Extra large devices and up. */
 
 /** Application templates. */
 .ig-grid.ig-cols-1.ig-app {
@@ -201,8 +200,8 @@
 .ig-grid > .ig-main-2 { grid-area: main-2; }
 .ig-grid > .ig-main-3 { grid-area: main-3; }
 
-/** Large devices (desktops, 992px and up) */
-@media (max-width: 1200px) {
+/** Large devices and down. */
+@include mq-lg-max {
 	.ig-grid.ig-cols-2.ig-bk-lg {
 		grid-template-columns: 1fr;
 	}
@@ -233,8 +232,9 @@
 			"south";
 	}
 }
-/** Medium devices (tablets, 768px and up) */
-@media (max-width: 992px) {
+
+/** Medium devices and down. */
+@include mq-md-max {
 	.ig-grid.ig-cols-2.ig-bk-md {
 		grid-template-columns: 1fr;
 	}
@@ -266,9 +266,8 @@
 	}
 }
 
-
-/** Small devices (landscape phones, 576px and up) */
-@media (max-width: 768px) {
+/** Small devices and down. */
+@include mq-sm-max {
 	.ig-grid.ig-cols-2.ig-bk-sm {
 		grid-template-columns: 1fr;
 	}
@@ -300,8 +299,8 @@
 	}
 }
 
-/** Extra-small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+/** Extra small devices and down. */
+@include mq-xs-max {
 	.ig-grid.ig-cols-2.ig-bk-xs {
 		grid-template-columns: 1fr;
 	}
@@ -332,4 +331,3 @@
 			"south";
 	}
 }
-
