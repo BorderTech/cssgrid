@@ -1,44 +1,44 @@
 // Application templates.
 // These styles invoke from XL down to XS (Not Mobile First - Desktop First))
 // DEFAULT - Extra large devices and up.
-@if ($ig-include-apps == 1) {
-	.ig-grid {
+@if ($cg-include-apps == 1) {
+	.#{$cg-prefix}-grid {
 		//  Standard Grid areas
-		> .ig-north { grid-area: north; }
-		> .ig-south { grid-area: south; }
-		> .ig-east { grid-area: east; }
-		> .ig-west { grid-area: west; }
-		> .ig-center { grid-area: center; }
-		> .ig-header { grid-area: header; }
-		> .ig-footer { grid-area: footer; }
-		> .ig-main { grid-area: main; }
-		> .ig-main-1 { grid-area: main-1; }
-		> .ig-main-2 { grid-area: main-2; }
-		> .ig-main-3 { grid-area: main-3; }
+		> .#{$cg-prefix}-north { grid-area: north; }
+		> .#{$cg-prefix}-south { grid-area: south; }
+		> .#{$cg-prefix}-east { grid-area: east; }
+		> .#{$cg-prefix}-west { grid-area: west; }
+		> .#{$cg-prefix}-center { grid-area: center; }
+		> .#{$cg-prefix}-header { grid-area: header; }
+		> .#{$cg-prefix}-footer { grid-area: footer; }
+		> .#{$cg-prefix}-main { grid-area: main; }
+		> .#{$cg-prefix}-main-1 { grid-area: main-1; }
+		> .#{$cg-prefix}-main-2 { grid-area: main-2; }
+		> .#{$cg-prefix}-main-3 { grid-area: main-3; }
 
-		&.ig-cols-1.ig-app {
+		&.#{$cg-prefix}-cols-1.#{$cg-prefix}-app {
 			grid-template-areas:
 				"header"
 				"main"
 				"footer";
 		}
 
-		&.ig-cols-2.ig-app {
+		&.#{$cg-prefix}-cols-2.#{$cg-prefix}-app {
 			grid-template-areas:
 				"header header"
 				"main-1 main-2"
 				"footer footer";
 		}
 
-		&.ig-cols-3 {
-			&.ig-app {
+		&.#{$cg-prefix}-cols-3 {
+			&.#{$cg-prefix}-app {
 				grid-template-areas:
 					"header header header"
 					"main-1 main-2 main-3"
 					"footer footer footer";
 			}
 
-			&.ig-border {
+			&.#{$cg-prefix}-border {
 				grid-template-areas:
 					"north north north"
 					"west center east"
@@ -48,11 +48,11 @@
 
 		//  Large devices and down.
 		@include mq-lg-max {
-			&.ig-cols-2 {
-				&.ig-bk-lg {
+			&.#{$cg-prefix}-cols-2 {
+				&.#{$cg-prefix}-bk-lg {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -62,11 +62,11 @@
 				}
 			}
 
-			&.ig-cols-3 {
-				&.ig-bk-lg {
+			&.#{$cg-prefix}-cols-3 {
+				&.#{$cg-prefix}-bk-lg {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -75,7 +75,7 @@
 							"footer";
 					}
 
-					&.ig-border {
+					&.#{$cg-prefix}-border {
 						grid-template-areas:
 							"north"
 							"west"
@@ -91,11 +91,11 @@
 
 		//  Medium devices and down.
 		@include mq-md-max {
-			&.ig-cols-2 {
-				&.ig-bk-md {
+			&.#{$cg-prefix}-cols-2 {
+				&.#{$cg-prefix}-bk-md {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -106,11 +106,11 @@
 			}
 
 
-			&.ig-cols-3 {
-				&.ig-bk-md {
+			&.#{$cg-prefix}-cols-3 {
+				&.#{$cg-prefix}-bk-md {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -119,7 +119,7 @@
 							"footer";
 					}
 
-					&.ig-border {
+					&.#{$cg-prefix}-border {
 						grid-template-areas:
 							"north"
 							"west"
@@ -133,11 +133,11 @@
 
 		//  Small devices and down.
 		@include mq-sm-max {
-			&.ig-cols-2 {
-				&.ig-bk-sm {
+			&.#{$cg-prefix}-cols-2 {
+				&.#{$cg-prefix}-bk-sm {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -147,11 +147,11 @@
 				}
 			}
 
-			&.ig-cols-3 {
-				&.ig-bk-sm {
+			&.#{$cg-prefix}-cols-3 {
+				&.#{$cg-prefix}-bk-sm {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -160,7 +160,7 @@
 							"footer";
 					}
 
-					&.ig-border {
+					&.#{$cg-prefix}-border {
 						grid-template-areas:
 							"north"
 							"west"
@@ -174,11 +174,11 @@
 
 		//  Extra small devices and down.
 		@include mq-xs-max {
-			&.ig-cols-2 {
-				&.ig-bk-xs {
+			&.#{$cg-prefix}-cols-2 {
+				&.#{$cg-prefix}-bk-xs {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -188,11 +188,11 @@
 				}
 			}
 
-			&.ig-cols-3 {
-				&.ig-bk-xs {
+			&.#{$cg-prefix}-cols-3 {
+				&.#{$cg-prefix}-bk-xs {
 					grid-template-columns: 1fr;
 
-					&.ig-app {
+					&.#{$cg-prefix}-app {
 						grid-template-areas:
 							"header"
 							"main-1"
@@ -201,7 +201,7 @@
 							"footer";
 					}
 
-					&.ig-border {
+					&.#{$cg-prefix}-border {
 						grid-template-areas:
 							"north"
 							"west"

@@ -1,6 +1,6 @@
 {
   "name": "@bordertech/cssgrid",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://bordertech.github.io/cssgrid/",
   "author": "bordertech<bordertech@border.gov.au>",
   "description": "Responsive CSS helper classes based on Grid",
@@ -32,8 +32,8 @@
     "build-clean": "rimraf dist",
     "build-sass": "node-sass --output-style expanded sass/base.scss dist/cssgrid.css",
     "build-sass-min": "node-sass --output-style compressed sass/base.scss dist/cssgrid-min.css",
-    "build-ie-sass": "node-sass --output-style expanded sass/ie-idgray.scss dist/ie-cssgrid.css",
-    "build-ie-sass-min": "node-sass --output-style compressed sass/ie-idgray.scss dist/ie-cssgrid-min.css",
+    "build-ie-sass": "node-sass --output-style expanded sass/ie.scss dist/ie-cssgrid.css",
+    "build-ie-sass-min": "node-sass --output-style compressed sass/ie.scss dist/ie-cssgrid-min.css",
     "release": "yarn run build && yarn publish --access public"
   },
   "files": [

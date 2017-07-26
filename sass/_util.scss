@@ -1,0 +1,35 @@
+// --------------------------------------------------
+// SECTION - Util
+// --------------------------------------------------
+
+.#{$cg-prefix}-hidden { display: none; }
+
+@include mq-sm-min {
+	.#{$cg-prefix}-hidden-sm { display: none; }
+}
+@include mq-md-min {
+	.#{$cg-prefix}-hidden-md { display: none; }
+}
+@include mq-lg-min {
+	.#{$cg-prefix}-hidden-lg { display: none; }
+}
+@include mq-xl-min {
+	.#{$cg-prefix}-hidden-xl { display: none; }
+}
+
+
+@include mq-xs-only {
+	.#{$cg-prefix}-hidden-xs-only { display: none; }
+}
+@include mq-sm-only {
+	.#{$cg-prefix}-hidden-sm-only { display: none; }
+}
+@include mq-md-only {
+	.#{$cg-prefix}-hidden-md-only { display: none; }
+}
+@include mq-lg-only {
+	.#{$cg-prefix}-hidden-lg-only { display: none; }
+}
+@include mq-xl-only {
+	.#{$cg-prefix}-hidden-xl-only { display: none; }
+}
