@@ -1,6 +1,6 @@
 {
   "name": "@bordertech/cssgrid",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "homepage": "https://bordertech.github.io/cssgrid/",
   "author": "bordertech<bordertech@border.gov.au>",
   "description": "Responsive CSS helper classes based on Grid",
