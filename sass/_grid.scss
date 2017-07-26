@@ -1,0 +1,149 @@
+// --------------------------------------------------
+// SECTION - Grid
+// --------------------------------------------------
+
+.#{$cg-prefix}-grid {
+  @if ($cg-include-ie == 1) {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+	display: grid;
+	grid-gap: 0;
+	grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+
+  > * {
+    @if ($cg-include-ie == 1) {
+      -ms-grid-column-span: 12;
+    }
+    grid-column: span 12;
+  }
+
+  // Predefined column layouts.
+  &.#{$cg-prefix}-cols-1,
+  &.#{$cg-prefix}-cols-2,
+  &.#{$cg-prefix}-cols-3,
+  &.#{$cg-prefix}-cols-12 {
+    > * {
+      @if ($cg-include-ie == 1) {
+        -ms-grid-column-span: 1;
+      }
+      grid-column: span 1;
+    }
+  }
+
+  //  One column.
+  &.#{$cg-prefix}-cols-1 {
+    @if ($cg-include-ie == 1) {
+      -ms-grid-columns: 1fr;
+    }
+    grid-template-columns: 1fr;
+  }
+
+  //  Two Columns.
+  &.#{$cg-prefix}-cols-2 {
+    @if ($cg-include-ie == 1) {
+      -ms-grid-columns: 1fr 1fr;
+    }
+    grid-template-columns: 1fr 1fr;
+  }
+
+  //  Three Columns.
+  &.#{$cg-prefix}-cols-3 {
+    @if ($cg-include-ie == 1) {
+      -ms-grid-columns: 1fr 1fr 1fr;
+    }
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+  //  Twelve columns.
+  &.#{$cg-prefix}-cols-12 {
+    // NOTE: Jonathan - the next line is redundant.
+    // grid-template-columns: repeat(12, 1fr);
+  }
+
+  @for $i from 1 through 12 {
+    > .#{$cg-prefix}-col-#{$i} {
+      @if ($cg-include-ie == 1) {
+        -ms-grid-columns: #{$i};
+      }
+      grid-column: span #{$i};
+    }
+  }
+
+  //  Gaps.
+  &.#{$cg-prefix}-gap-s {
+    grid-gap: $cg-gap-s;
+  }
+
+  &.#{$cg-prefix}-gap-m {
+    grid-gap: $cg-gap-m;
+  }
+
+  &.#{$cg-prefix}-gap-l {
+    grid-gap: $cg-gap-l;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// NOTE: @jonathan this is all the stuff we still need to work on -
+// I am not sure what you want this to do!
+////////////////////////////////////////////////////////////////////////////////
+
+//  Media queries.
+//  These styles invoke from XS down to XL (Mobile First)
+
+//  No media query since this is the default
+//  Extra small devices and up.
+
+
+
+//  Small devices and up.
+@include mq-sm-min {
+  .#{$cg-prefix}-grid {
+    @for $i from 1 through 12 {
+      > .#{$cg-prefix}-col-sm-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+//  Medium devices and up.
+@include mq-md-min {
+  .#{$cg-prefix}-grid {
+    @for $i from 1 through 12 {
+      > .#{$cg-prefix}-col-md-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+//  Large devices and up.
+@include mq-lg-min {
+  .#{$cg-prefix}-grid {
+    @for $i from 1 through 12 {
+      > .#{$cg-prefix}-col-lg-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+//  Extra large devices and up.
+@include mq-xl-min {
+  .#{$cg-prefix}-grid {
+    @for $i from 1 through 12 {
+      > .#{$cg-prefix}-col-xl-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+@import 'presets';
+//  Application templates.
+@import 'sample-layouts';

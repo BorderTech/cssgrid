@@ -1,10 +1,8 @@
 /**
-*
 * Idgray provides responsive CSS classes for Grid, Flexbox and Masonry.
 */
-@import 'vars/idgray';
+@import 'vars/main';
 @import 'mixins/responsive';
-@import 'idgray-util';
-@import 'idgray-grid';
-@import 'idgray-flex';
-@import 'idgray-masonry';
+@import 'util';
+@import 'grid';
+@import 'masonry';
