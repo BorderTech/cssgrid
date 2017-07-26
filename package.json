@@ -1,26 +1,27 @@
 {
-  "name": "@bordertech/idgray",
-  "version": "0.0.2",
-  "homepage": "https://bordertech.github.io/idgray/",
+  "name": "@bordertech/cssgrid",
+  "version": "0.0.0",
+  "homepage": "https://bordertech.github.io/cssgrid/",
   "author": "bordertech<bordertech@border.gov.au>",
   "description": "Responsive CSS helper classes based on Grid",
-  "main": "dist/idgray.css",
+  "main": "dist/cssgrid.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BorderTech/idgray.git"
+    "url": "git+https://github.com/BorderTech/cssgrid.git"
   },
   "license": "MIT",
   "keywords": [
     "css",
     "grid",
     "sass",
+    "scss",
     "masonry",
-    "flexbox",
     "responsive",
-    "framework"
+    "framework",
+    "helper"
   ],
   "bugs": {
-    "url": "https://github.com/BorderTech/idgray/issues"
+    "url": "https://github.com/BorderTech/cssgrid/issues"
   },
   "devDependencies": {
     "node-sass": "4.5.3",
@@ -29,10 +30,10 @@
   "scripts": {
     "build": "yarn run build-clean && yarn run build-sass && yarn run build-sass-min && yarn run build-ie-sass && yarn run build-ie-sass-min",
     "build-clean": "rimraf dist",
-    "build-sass": "node-sass --output-style expanded sass/base.scss dist/idgray.css",
-    "build-sass-min": "node-sass --output-style compressed sass/base.scss dist/idgray-min.css",
-    "build-ie-sass": "node-sass --output-style expanded sass/ie-idgray.scss dist/ie-idgray.css",
-    "build-ie-sass-min": "node-sass --output-style compressed sass/ie-idgray.scss dist/ie-idgray-min.css",
+    "build-sass": "node-sass --output-style expanded sass/base.scss dist/cssgrid.css",
+    "build-sass-min": "node-sass --output-style compressed sass/base.scss dist/cssgrid-min.css",
+    "build-ie-sass": "node-sass --output-style expanded sass/ie-idgray.scss dist/ie-cssgrid.css",
+    "build-ie-sass-min": "node-sass --output-style compressed sass/ie-idgray.scss dist/ie-cssgrid-min.css",
     "release": "yarn run build && yarn publish --access public"
   },
   "files": [
