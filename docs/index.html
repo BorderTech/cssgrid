@@ -10,3 +10,187 @@ route: index
 <p>
 	View <a href="demo">demo.</a>
 </p>
+
+<h2>Installing cssgrid</h2>
+
+<h3>Download</h3>
+
+<ul>
+	<li>
+		<a href="https://unpkg.com/@bordertech/cssgrid/dist/cssgrid-min.css">cssgrid.min.css</a> minified, or
+	</li>
+	<li>
+		<a href="https://unpkg.com/@bordertech/cssgrid/dist/cssgrid.css">cssgrid.css</a> or unminified.
+	</li>
+</ul>
+
+
+<h3>CDN</h3>
+
+<p>Link directly to cssfile files on <a href="https://unpkg.com">unpkg</a>.</p>
+
+<pre><code>&lt;link<span class="attr"> rel=</span><span class="string">&quot;stylesheet&quot;</span><span class="attr"> type=</span><span class="string">&quot;text/css&quot;</span><span class="attr"> href=</span><span class="string">&quot;https://unpkg.com/@bordertech/cssgrid/dist/cssgrid.min.css&quot;</span><span class="tag">&gt;</span>
+<span class="comment">&lt;!-- or --&gt;</span>
+&lt;link<span class="attr"> rel=</span><span class="string">&quot;stylesheet&quot;</span><span class="attr"> type=</span><span class="string">&quot;text/css&quot;</span><span class="attr"> href=</span><span class="string">&quot;https://unpkg.com/@bordertech/cssgrid/dist/cssgrid.css&quot;</span>&gt;</code></pre>
+
+<h3>Package managers</h3>
+
+<p><a href="https://www.npmjs.com/package/@bordertech/cssgrid">Install with npm</a>: <code>npm install @bordertech/cssgrid</code></p>
+
+<p><a href="https://yarn.fyi/@bordertech/cssgrid">Install with yarn</a>: <code>yarn install @bordertech/cssgrid</code></p>
+
+<h2>Getting started</h2>
+
+<p>Create powerful multi-device layouts quickly and easily with the default 12-column, nest-able css grid.</p>
+
+<h3>Basic Grid</h3>
+
+<p>Create a container and add the class <code>cg-grid</code> which provides a grid with the default 12 columns.</p>
+<pre><code>&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+...
+&lt;/div&gt;</code></pre>
+
+<p>The direct children of the container are used as the items in the grid.</p>
+<pre><code>&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div&gt;...&lt;/div&gt;
+  &lt;div&gt;...&lt;/div&gt;
+  &lt;div&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>The width of each column can be determined by adding one of the following classes:-</p>
+<ul>
+	<li><code>cg-col-1</code></li>
+	<li><code>cg-col-2</code></li>
+	<li><code>cg-col-3</code></li>
+	<li><code>......</code></li>
+	<li><code>cg-col-11</code></li>
+	<li><code>cg-col-12</code></li>
+</ul>
+
+<p>Each class is named after how many columns you want out of 12. So if you want 4 columns out of 12, use <code>cg-col-4</code>.</p>
+
+<p>Here is an example of a grid with 3 equal columns.</p>
+
+<h4>html</h4>
+<pre><code>&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-4&quot;</span>&gt;</span>...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-4&quot;</span>&gt;</span>...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-4&quot;</span>&gt;</span>...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>rendered</h4>
+<div class="eg-rendered">
+	<div class="cg-grid">
+		<div class="cg-col-4">.cg-col-4</div>
+		<div class="cg-col-4">.cg-col-4</div>
+		<div class="cg-col-4">.cg-col-4</div>
+	</div>
+</div>
+
+<h3>Responsive classes</h3>
+
+<p>Cssgrid is mobile-first. Remember to code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.</p>
+
+<p>There are five levels of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
+
+<p>The breakpoints are based on minimum widths, meaning they apply to that one size and all those above it (e.g., .col-sm-6 applies to small, medium, large, and extra large devices).</p>
+
+<p> These examples have been inspired by <a href="https://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap</a> that uses Flexbox.</p>
+
+<h3>Mobile First (ie all breakpoints)</h3>
+
+<p>For grids that are the same from the smallest of devices to the largest, use the <code>.cg-col-*</code> classes. Specify a numbered class when you need a particularly sized column.</p>
+
+<h4>html</h4>
+<pre><code>&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-5&quot;</span>&gt;...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-7&quot;</span>&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>rendered</h4>
+<div class="eg-rendered">
+	<div class="cg-grid">
+		<div class="cg-col-5">.cg-col-5</div>
+		<div class="cg-col-7">.cg-col-7</div>
+	</div>
+</div>
+
+
+<h3>Stacked to horizontal</h3>
+
+<p>Using a single set of <code>.col-sm-*</code> classes, you can create a basic grid system that starts out stacked on extra small devices before becoming horizontal on desktop (medium) devices.</p>
+
+<h4>html</h4>
+<pre><code>&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-md-4&quot;</span>&gt;...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-md-4&quot;</span>&gt;...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-md-4&quot;</span>&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>rendered</h4>
+<div class="eg-rendered">
+	<div class="cg-grid">
+		<div class="cg-col-md-4">.cg-col-md-4</div>
+		<div class="cg-col-md-4">.cg-col-md-4</div>
+		<div class="cg-col-md-4">.cg-col-md-4</div>
+	</div>
+</div>
+
+<h3>Mix and match</h3>
+
+<p>Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.</p>
+
+<h4>html</h4>
+<pre><code>
+<span class="comment">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-md-8&quot;</span>&gt;</span>...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-6 cg-col-md-4&quot;</span>&gt;</span>...&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-6 cg-col-lg-4&quot;</span>&gt;</span>...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-6 cg-col-lg-4&quot;</span>&gt;</span>...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-6 cg-col-lg-4&quot;</span>&gt;</span>...&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+&lt;div<span class="attr"> class=</span><span class="string">&quot;cg-grid&quot;</span>&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-6&quot;</span>&gt;</span>...&lt;/div&gt;
+  &lt;div<span class="attr"> class=</span><span class="string">&quot;cg-col-6&quot;</span>&gt;</span>...&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+<h4>rendered</h4>
+<div class="eg-rendered">
+	<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+	<div class="cg-grid">
+		<div class="cg-col-md-8">.cg-col-md-8</div>
+		<div class="cg-col-6 cg-col-md-4">.cg-col-6 .cg-col-md-4</div>
+	</div>
+	<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+	<div class="cg-grid">
+		<div class="cg-col-6 cg-col-lg-4">.cg-col-6 .cg-col-lg-4</div>
+		<div class="cg-col-6 cg-col-lg-4">.cg-col-6 .cg-col-lg-4</div>
+		<div class="cg-col-6 cg-col-lg-4">.cg-col-6 .cg-col-lg-4</div>
+	</div>
+	<!-- Columns are always 50% wide, on mobile and desktop -->
+	<div class="cg-grid">
+		<div class="cg-col-6">.cg-col-6</div>
+		<div class="cg-col-6">.cg-col-6</div>
+	</div>
+</div>
+
+<p>Add these column sizes to respond to the 5 levels of breakpoints:</p>
+
+<ul>
+	<li>xs: <code>cg-col-*</code></li>
+	<li>sm: <code>cg-col-sm-*</code></li>
+	<li>md: <code>cg-col-md-*</code></li>
+	<li>lg: <code>cg-col-lg-*</code></li>
+	<li>xl: <code>cg-col-xl-*</code></li>
+</ul>
+
+
